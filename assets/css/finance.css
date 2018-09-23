@@ -1,0 +1,17 @@
+.wrapper{
+	height:100vh !important;
+}
+
+.inner{
+	height:225px;
+}
+
+.inner h3{
+	text-align: center !important;
+	margin-top:90px ; 
+	display: block;
+}
+
+.small-box-footer{
+	font-size: 20px;
+}

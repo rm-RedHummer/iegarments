@@ -1,0 +1,9 @@
+.login-box {
+	height:100vh;
+  margin:auto auto;
+  padding-top: 130px;
+}
+
+.login-logo a {
+	color:white;
+}
