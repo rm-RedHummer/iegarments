@@ -34,6 +34,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
+            <li <?php if($uri == 'finance'){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>"><i class="fa fa-circle-o"></i>Home</a></li>
             <li <?php if($uri == 'sales-invoice'){echo 'class="active"';}?>><a href="<?php echo site_url('sales-invoice'); ?>"><i class="fa fa-circle-o"></i>Sales Invoice</a></li>
             <li <?php if($uri == 'sales-ledger'){echo 'class="active"';}?>><a href="<?php echo site_url('sales-ledger'); ?>"><i class="fa fa-circle-o"></i>Sales Ledger</a></li>
             <li <?php if($uri == 'subsidiary'){echo 'class="active"';}?>><a href="<?php echo site_url('subsidiary-ledger'); ?>"><i class="fa fa-circle-o"></i>A/R Subsidiary Ledger</a></li>

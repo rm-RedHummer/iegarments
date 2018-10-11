@@ -1,5 +1,16 @@
 #table-header th{
-  min-width:150px; 
+  min-width:150px;
   text-align:center;
+
+}
+#sales-invoice-table th{
+  padding:5px;
+}
+.th-darken th {
+  background-color: lightgray;
+}
+body {
+  width:fit-content !important;
+  overflow-x:scroll !important;
 
 }

@@ -6,9 +6,9 @@ class Finance extends Main_Controller {
 	public function __construct()
     {
         parent::__construct();
-    }  
+    }
 	public function index()
 	{
-		$this->view('finance_view',null,null,'finance.css',null); //name, script , data, css
+		$this->view('finance_view',null,null,'finance.css','finance'); //name, script , data, css
 	}
 }
