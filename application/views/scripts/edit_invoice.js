@@ -19,6 +19,11 @@ $(document).ready(function() {
         )
         .append($('<td>')
           .attr('contenteditable', 'true')
+
+        ).append($('<td>')
+          .attr('contenteditable', 'true')
+          .attr('style','display:none')
+          .text('none')
         )
     );
   });
@@ -65,7 +70,7 @@ $(document).ready(function() {
       dataType: "json",
       data : {number:number,company:company,address:address,date:date,prodArray:prodArray,week:week},
       success: function(data){
-
+        
         if(data.result == true) {
           alert("Success editing!");
         }

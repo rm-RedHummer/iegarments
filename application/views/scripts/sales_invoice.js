@@ -51,6 +51,7 @@ $(document).ready(function() {
       data : {number:number,company:company,address:address,date:date,prodArray:prodArray,week:week},
       success: function(data){
         if(data.result == true) {
+          alert("Success adding new sales invoice!");
           window.location.href = "http://localhost/iegarments/index.php/sales-invoice";
         }
 

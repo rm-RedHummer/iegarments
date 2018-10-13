@@ -26,6 +26,7 @@ class saveInvoice extends Main_Controller {
 
       $prodArray = $this->input->post('prodArray');
 
+
       for ($ctr=0; $ctr < count($prodArray); $ctr++) {
         $tempArray = array();
         $tempArray["invoice_number"] = $number;
@@ -33,7 +34,14 @@ class saveInvoice extends Main_Controller {
         for ($i=0; $i < count($prodArray[$ctr]); $i++) {
           $tempArray[$cols[$i]] = $prodArray[$ctr][$i];
         }
-        $res = $this->Sales_invoice_model->update_invoice_products($tempArray);
+				if($tempArray['id'] != 'none') {
+					$res = $this->Sales_invoice_model->update_invoice_products($tempArray);
+				} else if($tempArray['id'] == 'none') {
+					
+					unset($tempArray['id']);
+					$this->Sales_invoice_model->add_invoice_products($tempArray);
+				}
+
       }
 
   		echo json_encode(array('result'=>$result));
