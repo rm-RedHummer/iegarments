@@ -59,10 +59,10 @@ $(document).ready(function() {
     $.ajax({
       url : "<?php echo site_url('sales-invoice/addInvoice'); ?>",
       method : "POST",
-      dataType: 'json',
+      
       data : {number:"fake"},
       success: function(data){
-        $('#out').text(data.name);
+        alert(data);
       },
 
 
