@@ -16,9 +16,6 @@ class Sales_invoice extends Main_Controller {
 			$this->loadSpecificInvoice($uri);
 		} else if ($uri == 'edit') {
 			$this->editInvoice($sec_uri);
-		} else if ($uri == 'add' && $sec_uri == null) {
-			$this->addInvoice();
-
 		} else {
 			header("LOCATION: ".site_url('sales-invoice'));
 		}
@@ -38,13 +35,6 @@ class Sales_invoice extends Main_Controller {
 	public function editInvoice($sec_uri){
 		$data['sales_invoice'] = $this->Sales_invoice_model->get_specific_sales_invoice($sec_uri[0]);
 		$data['sales_invoice_products'] = $this->Sales_invoice_model->get_invoice_products($sec_uri[0]);
-		$this->view('edit_invoice',null,$data,null,'sales-invoice'); //name, script , data, css, uri
-	}
-
-	public function addInvoice(){
-		$data = array(
-			'name' => 'yeah',
-		);
-		echo json_encode($data);
+		$this->view('edit_invoice','scripts/edit_invoice.js',$data,null,'sales-invoice'); //name, script , data, css, uri
 	}
 }

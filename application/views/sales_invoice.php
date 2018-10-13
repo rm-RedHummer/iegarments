@@ -42,6 +42,12 @@
                               <input type="date" class="form-control" id="date" placeholder="Enter date" >
                             </div>
                           </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-4 " for="week">Week Number</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" id="week" placeholder="Enter week number">
+                            </div>
+                          </div>
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
